@@ -1,27 +1,38 @@
-#include<stdio.h>
-//Mohammed Wadhah    CT-25091
- struct empolyee 
+#include <stdio.h>
+//Mohammed Wadhah CT-25091
+void CountFrequency(int array1[], int size)
 {
-    int id;
-    char name[20];
-    float salary;};
-int main(){
-struct empolyee e1[5];
-     for (int i=0;i<5;i++){
-	 
-    printf("Enter employee id: ");
-    scanf("%d", &e1[i].id);
-    printf("Enter employee name: ");
-    scanf("%s", e1[i].name);
-    printf("Enter employee salary: ");
-    scanf("%f", &e1[i].salary);
-    printf("\nEmployee Details:\n");
-    printf("ID: %d\n", e1[i].id);
-    printf("Name: %s\n", e1[i].name);
-    printf("Salary: %.2f\n", e1[i].salary);
-}
+    int count[11] = {0};   
 
+    for(int i = 0; i < size; i++)
+    {
+        count[array1[i]] = count[array1[i]] + 1;
+    }
 
-return 0;
+    printf("\nValue  Count\n");
+
+    for(int i = 0; i <= 10; i++)
+    {
+        if(count[i] > 0)
+        {
+            printf("%d\t%d\n", i, count[i]);
+        }}
+    }
+int main()
+{
+    int size;
+
+    printf("Enter size of array: ");
+    scanf("%d", &size);
+
+    int array1[size];
+    printf("Enter %d elements (0 to 10):\n", size);
+    for(int i = 0; i < size; i++)
+    {
+        scanf("%d", &array1[i]);
+    }
+    CountFrequency(array1, size);
+
+    return 0;
 }
 

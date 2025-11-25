@@ -4,7 +4,7 @@ int main(){
 	
 	int num;
 	
-	printf("\n*****************************************************\n");
+	printf("\n       **      \n");
 	
 	printf("welcome to my program\n");
 	printf("please enter the number to show the multiplcation table.\n");
@@ -25,3 +25,4 @@ int main(){
 	
 	printf("\nThankyou for using our program\n");
 }
+
